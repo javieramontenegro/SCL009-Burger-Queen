@@ -74,7 +74,7 @@ return element.total
 
 
  }
-
+ 
   render() {
     return (
       <>
@@ -96,7 +96,7 @@ return element.total
             }
           </tbody>
         </table>
-        <Total total={this.sumar(this.state.suma)} />
+        <Total total={this.sumar(this.state.suma)} finalOrder={this.state.order}  />
       </>
     )
   }

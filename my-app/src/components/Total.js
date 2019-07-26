@@ -1,20 +1,21 @@
 import React from 'react';
-
+//import {db} from '../firebaseInit.js';
 class Total extends React.Component {
   constructor(props) {
     super(props);
 
     this.state={
-      value: ''
+      client: ''
     }
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(event) {
-    this.setState({value: event.target.value});
-    console.log(this.state.value)
+    this.setState({client: event.target.value});
+    console.log(this.state.client)
   }
+  
   render() {
-
+   
 
     return (
 <>
@@ -27,7 +28,7 @@ class Total extends React.Component {
        
       </div>
        <div>
-       <button className="btn-total">Enviar a cocina</button>  <input className="input" value={this.state.value} type="text" onChange={this.handleChange} placeholder="Nombre cliente"></input>
+       <button className="btn-total" id="send"  >Enviar a cocina</button>  <input className="input" value={this.state.client} type="text" onChange={this.handleChange} placeholder="Nombre cliente"></input>
        </div>
        </>
     )
